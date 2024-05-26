@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registrasi</title>
+        <link rel="stylesheet" href="Rani.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1">
+    </head>
+
+    <body>
+        <div class="popi">
+            <div class="form-box">
+                <div class="btn-siti">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="Masuk()">Masuk</button>
+                    <button type="button" class="toggle-btn" onclick="Registerasi()">Registrasi</button>
+                </div>
+                <div class="sosial">
+                    <img src="fb.jpeg">
+                    <img src="gugel.jpeg">
+                    <img src="tt.jpeg">
+            </div>
+            <form id="Masuk" class="input-group" onsubmit="redirectToMasukPage(event)">
+                <input type="text" class="input-field" placeholder="Buat User" required>
+                <input type="text" class="input-field" placeholder="Buat Password Valid" required>
+                <input type="checkbox" class="chech-box"><span>Catat Password?</span>
+            <a href="index.html">
+                <button type="submit" class="submit-btn">MASUK</button>
+            </a>
+
+            </form>
+            <form id="Registrasi" class="input-group" onsubmit="redirectToRegistrasiPage(event)">
+                <input type="text" class="input-field" placeholder="User Terpakai" required>
+                <input type="email" class="input-field" placeholder="E-mail" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="chech-box"><span>Aku menyetujui segala kondisi</span>
+                    <button type="submit" class="submit-btn" onclick="redirectToAnotherPage()">REGISTER</button>
+                    
+            </form>
+            </div>
+        </div>
+
+        <script>
+            var x = document.getElementById("Masuk")
+            var y = document.getElementById("Registrasi")
+            var z = document.getElementById("btn")
+            function Registerasi(){
+                x.style.left="-400px"
+                y.style.left="50px"
+                z.style.left="110px"
+            }
+                function Masuk() {
+                x.style.left="50px"
+                y.style.left="450px"
+                z.style.left="0px"
+                }
+                
+                function redirectToMasukPage(event) {
+                event.preventDefault();
+                window.location.href = 'index.html'; 
+            }
+
+            function redirectToRegistrasiPage(event) {
+                event.preventDefault();
+                window.location.href = 'index.html'; 
+            }
+                
+        </script>
+
+    </body>
+</html>
